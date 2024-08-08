@@ -36,7 +36,6 @@ export const InvoiceProvider = ({ children }) => {
             account: '__________',
             method: 'Bank',
         },
-        terms: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry...',
     });
 
     return (

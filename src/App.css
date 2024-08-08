@@ -1,0 +1,16 @@
+body {
+  font-family: "Rubik";
+  font-size: 14px;
+  font-weight: 400;
+  margin: 111.63px 60px 45px 57px;
+}
+
+p {
+  margin: 8px;
+}
+
+@media (max-width: 550px) {
+  body {
+    margin: 50px 30px 22px 29px;
+  }
+}

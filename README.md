@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+# 🧾 React Invoice Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the **React Invoice Application** project! This is a simple yet functional React app that helps simulate an invoice layout. It's built with modular components, uses Context API for state management, and has a clean and responsive design.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- **🧩 Modular Components:** Reusable and customizable components like `InvoiceHeader`, `ServiceDescription`, `PriceDetails`, and `Footer` to keep your code DRY and organized.
+- **🔗 Context API:** Simplified state management across components with React's Context API. No more props drilling!
+- **💅 Stylish Design:** Leveraging Bootstrap for responsive layouts, `@fontsource/rubik` for a modern font, and `classnames` for dynamic class management. We've also added support for SASS to make styling more powerful.
+- **🔧 Dummy Data:** Pre-loaded with sample data that you can easily swap out for real data from an API or database.
 
-### `npm start`
+## 🛠️ Project Setup
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Setting up the project is a breeze. Just follow these steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. **Clone the Repository:**
 
-### `npm test`
+    ```bash
+    git clone https://github.com/your-username/react-invoice-app.git
+    cd react-invoice-app
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. **Install Dependencies:**
 
-### `npm run build`
+    We’ve got everything you need, from React to SASS:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    ```bash
+    npm install
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    This will install all the required dependencies, including:
+    - `@fontsource/rubik`: For the sleek Rubik font.
+    - `bootstrap`: For responsive, mobile-first design.
+    - `classnames`: To dynamically manage classes.
+    - `sass`: For more powerful and flexible styling (installed as a dev dependency).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Run the Application:**
 
-### `npm run eject`
+    You’re just one command away from seeing the app in action:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    ```bash
+    npm start
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    The app will be up and running at `http://localhost:3000` in your browser.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🧩 Components Breakdown
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### **InvoiceHeader**
 
-## Learn More
+Displays the invoice number, customer details, and company information. You can easily customize it to fit your needs.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### **ServiceDescription**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Lists all the services provided, including descriptions and prices. It’s built to handle multiple service items dynamically.
 
-### Code Splitting
+### **PriceDetails**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Shows the breakdown of costs: subtotal, VAT, and total amount. Perfect for any financial summary.
 
-### Analyzing the Bundle Size
+### **Footer**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Contains payment information and the terms & conditions. Customize it to reflect your own company policies.
 
-### Making a Progressive Web App
+## 🌐 Using Context API
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+We’ve implemented React’s Context API to handle the state seamlessly across components. Here’s how you can tap into it:
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```javascript
+const InvoiceContext = createContext();
+export const useInvoice = () => useContext(InvoiceContext);

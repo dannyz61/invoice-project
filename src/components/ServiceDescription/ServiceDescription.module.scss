@@ -1,0 +1,48 @@
+.descriptionContainer {
+  height: 50px;
+  border: 1px solid rgb(217, 217, 217);
+  background: rgb(249, 249, 249);
+  align-items: center;
+  margin-bottom: 10px;
+}
+.serviceDescription {
+  padding: 20px;
+}
+@media (max-width: 768px) {
+  .serviceDescription {
+    padding: 10px;
+  }
+  .descriptionContainer {
+    flex-direction: column;
+    height: auto;
+  }
+  .descriptionTitle {
+    font-size: 16px;
+  }
+  .serviceItem {
+    height: auto;
+    margin-bottom: 20px;
+  }
+  .titlePosition {
+    text-align: left;
+  }
+}
+
+@media (max-width: 1024px) {
+  .serviceDescription {
+    padding: 15px;
+  }
+  .descriptionContainer {
+    flex-direction: row;
+    height: 50px;
+  }
+  .descriptionTitle {
+    font-size: 18px;
+  }
+  .serviceItem {
+    margin-bottom: 10px;
+  }
+  .titlePosition {
+    text-align: center;
+  }
+}

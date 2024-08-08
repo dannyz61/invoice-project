@@ -1,38 +1,32 @@
-import React from 'react';
-import { useInvoice } from '../../context/InvoiceProvider/InvoiceProvider';
-import { terms } from '../../constants/terms';
-
+import React from "react";
+import { terms } from "../../constants/terms";
+import styles from "./Footer.module.scss";
 
 const Footer = () => {
-    const { paymentInfo } = useInvoice();
+  return (
+    <div className={styles.footer}>
+      <div className={styles.terms}>
+        <p className={styles.footerHeading}>Terms & Conditions</p>
+        <ol>
+          <li className={styles.itemContainer}>{terms}</li>
+          <li className={styles.itemContainer}>{terms}</li>
+        </ol>
+      </div>
 
-    return (
-        <div >
-            <div >
-                <h4>Payment Info</h4>
-                <p>A/C NAME: {paymentInfo.accountName}</p>
-                <p>BANK: {paymentInfo.bank}</p>
-                <p>SWIFT: {paymentInfo.swift}</p>
-                <p>IBAN: {paymentInfo.iban}</p>
-                <p>ACCOUNT: {paymentInfo.account}</p>
-                <p>METHOD: {paymentInfo.method}</p>
-            </div>
-            <div>
-                <h4>Terms & Conditions</h4>
-                <p>1. ${terms}</p>
-                <p>2. ${terms}</p>
-
-            </div>
-            <div>
-            SIGNATURE
-            </div>
-            <div>
-              <div>Address</div>
-              <div>Phone</div>
-              <div>Email</div>
-            </div>
+      <div className={styles.signatureMainContainer}>
+        <div className={styles.signatureContainer}>
+          <div className={styles.signatureLineContainer}></div>
+          <span>SIGNATURE</span>
         </div>
-    );
+      </div>
+
+      <div className={styles.infoContainer}>
+        <div>Address</div>
+        <div>Phone</div>
+        <div>Email</div>
+      </div>
+    </div>
+  );
 };
 
 export default Footer;

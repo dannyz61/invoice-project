@@ -1,0 +1,57 @@
+.container {
+  height: 20rem;
+  margin-bottom: 59px;
+}
+
+.paymentInfo {
+  align-self: end;
+}
+
+.paymentInfoContainer {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.priceRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-right: 35px;
+  font-size: 15px;
+  font-weight: 500;
+  padding-inline: 40px;
+}
+
+.totalRow {
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  height: 50px;
+  background: rgb(36, 46, 105);
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 25px;
+}
+
+.vatContainer {
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .paymentInfo {
+    margin-bottom: 20px;
+  }
+  .priceDetails {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .paymentInfo {
+    margin-bottom: 10px;
+  }
+  .priceDetails {
+    padding: 10px;
+  }
+}

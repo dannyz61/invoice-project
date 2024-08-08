@@ -1,0 +1,37 @@
+.footerHeading {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+.terms {
+  text-align: left;
+  margin-bottom: 70px;
+}
+.itemContainer {
+  padding: 5px;
+  text-align: left;
+  width: 90%;
+}
+.signatureLineContainer {
+  width: 206px;
+  height: 1px;
+  background-color: black;
+}
+.signatureContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.signatureMainContainer {
+  display: flex;
+  justify-content: end;
+  margin-bottom: 90px;
+}
+
+.infoContainer {
+  display: flex;
+  justify-content: space-around;
+}
